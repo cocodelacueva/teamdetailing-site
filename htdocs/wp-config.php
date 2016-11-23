@@ -62,7 +62,7 @@ define('NONCE_SALT',       '7iUPUW`D4d&E-9[:t4Ih|:)|jdeg|ggq-M&Z+(!%2dW2eYrqN-ME
  * You can have multiple installations in one database if you give each
  * a unique prefix. Only numbers, letters, and underscores please!
  */
-$table_prefix = 'wp_';
+$table_prefix = 'td_';
 
 
 if ( isset( $_SERVER['HTTP_HOST'] ) && preg_match('/^(teamdetailing.)\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}(.xip.io)\z/', $_SERVER['HTTP_HOST'] ) ) {

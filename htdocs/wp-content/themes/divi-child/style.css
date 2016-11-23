@@ -54,14 +54,20 @@
 }
 
 /*estilos propios*/
-.lista-tratamientos {
+.lista-tratamientos, .lista-tratamientos li a {
     text-shadow: 1px 1px 1px #333;
     letter-spacing: 1px;
     font-size: 22px;
     line-height: 24px;
     margin: 0;
     padding: 0;
+    color: #fff;
 }
+
+.lista-tratamientos li a:hover {
+	text-decoration: underline;
+}
+
 
 .lista-sub-tratamientos {
 	text-shadow: 1px 1px 1px #333;

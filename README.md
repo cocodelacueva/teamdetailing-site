@@ -1,5 +1,12 @@
 # team detailing  
 
+Versión 1.1 Lacueva.tv
+
+### 1.1 Corregidos algunos cosillas del online y habilitación del pluggins protector
+
+* All in one security habilitado, permite solo tres intentos de inicio, activado el firewall y cambio de prefijo de base de datos a "td_"
+* Corregidos algunas cosas al verla online como las redes sociales y links
+
 Versión 1.0 LaCueva.tv  
 
 ### 1.0 versión lista para primera prueba online  
