@@ -1,0 +1,283 @@
+.iosSlider-container {
+	/* defaults for resposive height container */
+	position: relative;
+	width: 100%;
+	height: 0;
+	
+	/* 39% being the ratio we are maintaining 
+	 * calculated by looking at the image 
+	 * ratio: 400/1024 = ~0.39 */
+	/*padding: 0 0 39% 0;*/
+	
+	/*height:660px;*/
+	
+	margin-bottom:35px;
+	
+	overflow:hidden;
+	/*padding: 0 0 34% 0;
+	
+	margin-bottom:30px;
+	
+	overflow:hidden;
+	
+	background:url(http://localhost:8080/ewa/wp-content/uploads/2013/01/bg_grey.jpg);*/
+}
+
+.iosSliderOverlayContainer {
+	position:absolute;
+	width:1170px ;
+	margin-left:-585px ;
+	top:0px;
+	left:50%;
+	
+	/*border:1px solid red;*/
+	
+	height:100%;
+}
+
+.iosSliderCaption,
+.iosSliderDescription {
+	font-family:Arial, Helvetica, sans-serif;
+	position:absolute;
+	right:0;
+	bottom:117px;
+	color:#ffffff;
+	font-size:30px;
+	z-index:444;
+	
+	*background-color:#000000;
+	background-color:rgba(0,0,0, 0.8);
+	
+	padding:20px;
+	
+	opacity:0;	
+}
+
+.iosSliderDescription {
+	bottom:60px;
+	font-size:16px;
+}
+
+@media (max-width: 600px) {
+	.iosSlider.hideControls .ios-prev,
+	.iosSlider.hideControls .ios-next,
+	.iosSliderOverlayContainer {
+		display:none;
+	}
+}
+
+@media (max-width: 767px) {
+	.iosSliderOverlayContainer {	
+		-webkit-transform: scale(0.5);
+		-webkit-transform-origin: 50% 100%;
+		-moz-transform: scale(0.5);
+		-moz-transform-origin: 50% 100%;
+		-o-transform: scale(0.5);
+		-o-transform-origin: 50% 100%;
+		-ms-transform: scale(0.5);
+		-ms-transform-origin: 50% 100%;
+		transform: scale(0.5);
+		transform-origin: 50% 100%;
+		
+		width: 850px;
+		bottom: 30px;
+		margin-left: -425px;
+		
+		/*border: 1px solid #060 !important;*/
+	}
+}
+
+@media (max-width: 1235px) and (min-width: 978px) {
+	.iosSliderOverlayContainer {	
+		-webkit-transform: scale(0.8);
+		-webkit-transform-origin: 80% 100%;
+		-moz-transform: scale(0.8);
+		-moz-transform-origin: 80% 100%;
+		-o-transform: scale(0.8);
+		-o-transform-origin: 80% 100%;
+		-ms-transform: scale(0.8);
+		-ms-transform-origin: 80% 100%;
+		transform: scale(0.8);
+		transform-origin: 80% 100%;	
+		
+		width: 1024px;
+		margin-left: -512px;	
+		
+		/*border:1px solid #F00 !important;	*/
+	}	
+}
+
+@media (max-width: 979px) and (min-width: 768px) {
+	.iosSliderOverlayContainer {	
+		-webkit-transform: scale(0.6);
+		-webkit-transform-origin: 50% 100%;
+		-moz-transform: scale(0.6);
+		-moz-transform-origin: 50% 100%;
+		-o-transform: scale(0.6);
+		-o-transform-origin: 50% 100%;
+		-ms-transform: scale(0.6);
+		-ms-transform-origin: 50% 100%;
+		transform: scale(0.6);
+		transform-origin: 50% 100%;	
+		
+		width: 960px;
+		margin-left: -480px;	
+		
+		/*border:1px solid blue !important;	*/
+	}
+}
+
+.iosSlider.hideControls .ios-prev,
+.iosSlider.hideControls .ios-next{
+	opacity:0;filter:alpha(opacity=0);
+}
+
+.iosSlider.hideControls:hover .ios-prev,
+.iosSlider.hideControls:hover .ios-next{
+	opacity:1;filter:alpha(opacity=1);
+}
+
+.iosSlider {
+	width: 100%;
+	
+	/* this height ends up being your maximum height, 
+	 * if you want it to scale forever, set it to 
+	 * a very high number */
+	height: 1500px;
+	
+	position:relative;
+}
+
+.iosSlider .slider {
+	width: 100%;
+	height: 100%;
+}
+
+.iosSlider .slider .item {
+	float: left;
+	
+	width: 100%;
+}
+
+.iosSlider .slider .item img {
+	width: 100%;
+	height: auto;
+}
+
+/* controls */
+.iosSlider-container .prevContainer {
+	position: absolute;
+	/*top: 0;*/
+	left: 0;
+	/*width: 100px;*/
+	
+	/*padding: 0 0 19.5% 0;*/	
+	z-index: 10;
+	
+	width:68px !important;
+	height:68px !important;
+	/*top:50% !important;*/
+	top: 50%;
+	top: calc(50% - 34px);
+	top: -moz-calc(50% - 34px);
+	top: -webkit-calc(50% - 34px);
+	text-indent:-9999px;	
+}
+
+.iosSlider-container .prevContainer .ios-prev {
+	position: absolute;
+	/*bottom: -10%;*/
+	bottom: 0px;
+	left: 20px;
+	/*width: 100%;
+	height: 20%;
+	background: #aaa;*/
+	text-indent:-9999px;
+	background-color:#000000;
+	background:url(../../images/sliderarrow.png) no-repeat 0px 0px;
+	width:68px;
+	height:68px;	
+}
+
+.iosSlider-container .nextContainer {
+	position: absolute;
+	/*top: 0;*/
+	right: 0;
+	/*width: 100px;*/
+	
+	/*padding: 0 0 19.5% 0;*/
+	z-index: 10;
+	
+	width:68px !important;
+	height:68px !important;
+	/*top:50% !important;*/
+	top: 50%;
+	top: calc(50% - 34px);
+	top: -moz-calc(50% - 34px);
+	top: -webkit-calc(50% - 34px);
+	text-indent:-9999px;		
+}
+
+.iosSlider-container .nextContainer .ios-next {
+	position: absolute;
+	/*bottom: -10%;*/
+	bottom: 0px;	
+	/*left: 0;*/
+	right:20px;
+	/*width: 100%;
+	height: 20%;
+	background: #aaa;*/
+	text-indent:-9999px;
+	background-color:#000000;
+	background: url(../../images/sliderarrow.png) no-repeat 0px -68px;
+	width:68px;
+	height:68px;
+}
+
+.iosSlider-container .selectorsBlock {
+	position: absolute;
+	bottom: 30px;
+	width: 100%;
+	height: 5%;
+	text-align:center;
+}
+
+.iosSlider-container .selectorsBlock .selectors {
+	position: relative;
+	top: 0;
+	left: 0;
+	/*display:inline-block;*/
+	margin: 0 auto;
+	/*width: 100%;*/	
+	height: 100%;
+	
+
+	/*width:60px;*/
+}
+
+.iosSlider-container .selectorsBlock .selectors .item {
+	position:relative;
+	display:block;
+	float:left;
+	/*position: relative;
+	top: 0;
+	left: 0;
+	float: left;*/
+	
+	/*width: 16%;
+	height: 100%;*/
+	/*display:inline;*/
+	
+	width:16px;
+	height:6px;
+	margin: 0 0 0 3px;
+	background: #f7f7f7;
+}
+
+.iosSlider-container .selectorsBlock .selectors .selected {
+	background: #333;
+}
+
+.iosSlider-container .selectorsBlock .selectors .first {
+	margin-left: 0;
+}

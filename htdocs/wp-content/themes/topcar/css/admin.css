@@ -1,0 +1,248 @@
+.option-tree-active-layout > .color-layout-color-option-11 { background-color:#6e45fe; color: #fff; }
+
+.option-tree-active-layout > .color-layout-color-option-10 { background-color:#ff4200; color: #fff; }
+
+.option-tree-active-layout > .color-layout-color-option-9 { background-color:#5dc92f; color: #fff; }
+
+.option-tree-active-layout > .color-layout-color-option-8 { background-color:#1c1c1c; color: #fff; }
+
+.option-tree-active-layout > .color-layout-color-option-7 { background-color:#234d20; color: #fff; }
+
+.option-tree-active-layout > .color-layout-color-option-6 { background-color:#069096; color: #fff; }
+
+.option-tree-active-layout > .color-layout-color-option-5 { background-color:#49423d; color: #fff; }
+
+.option-tree-active-layout > .color-layout-color-option-4 { background-color:#CC3333; color: #fff; }
+
+.option-tree-active-layout > .color-layout-color-option-3 { background-color:#2e1532; color: #fff; }
+
+.option-tree-active-layout > .color-layout-color-option-2 { background-color:#2b2d41; color: #fff; }
+
+.option-tree-active-layout > .color-layout-light-01 { background-color:#0066ff; color: #fff; }
+
+.option-tree-active-layout > .color-layout-minimal-transparent-dark { background-color:#000000; color: #fff; }
+
+.option-tree-active-layout > .color-layout-dark-boxed { background-color:#000000; color: #fff; }
+
+.skin-menu {
+	padding-left:10px;
+	font-size:11px !important;
+}
+
+.skin-menu>a:before {
+	content: '- ';
+}
+
+button.reset-settings {
+	display:none !important;
+}
+
+.wrap.settings-wrap .ui-tabs-nav li {
+	min-height:28px !important;
+	padding-top:3px;
+	padding-bottom:3px;
+}
+
+.wrap.settings-wrap .ui-tabs-nav li a {
+	font-family:Tahoma, Geneva, sans-serif !important;
+	color:#323232 !important;
+	outline:none;
+	-moz-outline:none;
+}
+
+li#tab_general_default,
+li#tab_ic_general_options_tab,
+li#tab_ic_social_share_buttons,
+li#tab_ic_extras,
+li#tab_skin_options,
+li#tab_ic_background_slide_show,
+li#tab_ic_background_video,
+li#tab_ic_default_sidebar_layouts, 
+li#tab_ic_kenburner_slide_show,
+li#tab_ic_youtube_background,
+li#tab_ic_audio_player,
+li#tab_ic_woocommerce,
+li#tab_ic_facebook_comments,
+li#tab_ic_twitter_settings {
+	padding-left:32px !important;
+	background-repeat:no-repeat;
+	background-position:10px;
+}
+
+li#tab_general_default {
+	background-image:url(../images/admin/icon-typography.png);
+}
+
+li#tab_ic_general_options_tab {
+	background-image:url(../images/admin/icon-general.png);
+}
+
+li#tab_ic_social_share_buttons {
+	background-image:url(../images/admin/icon-social.png);
+}
+
+li#tab_ic_extras {
+	background-image:url(../images/admin/icon-extras.png);
+}
+
+li#tab_skin_options {
+	background-image:url(../images/admin/icon-skin.png);
+}
+
+li#tab_ic_background_slide_show {
+	background-image:url(../images/admin/icon-supersized.png);
+}
+
+li#tab_ic_background_video {
+	background-image:url(../images/admin/icon-video.png);
+}
+
+li#tab_ic_default_sidebar_layouts {
+	background-image:url(../images/admin/icon-default-sidebar.png);
+}
+
+li#tab_ic_kenburner_slide_show {
+	background-image:url(../images/admin/icon-slider.png);
+}
+
+li#tab_ic_youtube_background {
+	background-image:url(../images/admin/icon-youtube.png);
+}
+
+li#tab_ic_audio_player {
+	background-image:url(../images/admin/icon-audio.png);
+}
+
+li#tab_ic_woocommerce {
+	background-image:url(../images/admin/icon-shop.png);
+}
+
+li#tab_ic_facebook_comments {
+	background-image:url(../images/admin/icon-chat.png);
+}
+
+li#tab_ic_twitter_settings {
+	background-image:url(../images/admin/icon-twitter.png);
+}
+
+/*visual composer object icons*/
+
+.icon-wpb-ozy_clear_div {
+	background:url(../images/admin/row.png) no-repeat !important;
+	width:16px !important;
+	height:16px !important;
+}
+
+.icon-wpb-ozy_slider {
+	background:url(../images/admin/slider.png) no-repeat !important;
+	width:16px !important;
+	height:16px !important;
+}
+
+.icon-wpb-ozy_progress_bar {
+	background:url(../images/admin/progress.png) no-repeat !important;
+	width:16px !important;
+	height:16px !important;
+}
+
+.icon-wpb-ozy_blog_listing {
+	background:url(../images/admin/blog.png) no-repeat !important;
+	width:16px !important;
+	height:16px !important;
+}
+
+.icon-wpb-ozy_progress {
+	background:url(../images/admin/progress.png) no-repeat !important;
+	width:16px !important;
+	height:16px !important;
+}
+
+.icon-wpb-ozy_title_with_icon {
+	background:url(../images/admin/title-with-icon.png) no-repeat !important;
+	width:16px !important;
+	height:16px !important;
+}
+
+.icon-wpb-ozy_divider {
+	background:url(../images/admin/divider.png) no-repeat !important;
+	width:16px !important;
+	height:16px !important;
+}
+
+.icon-wpb-ozy_portfolio_details {
+	background:url(../images/admin/portfolio_16.png) no-repeat !important;
+	width:16px !important;
+	height:16px !important;
+}
+
+.icon-wpb-ozy_member_box {
+	background:url(../images/admin/member_16.png) no-repeat !important;
+	width:16px !important;
+	height:16px !important;
+}
+
+.icon-wpb-ozy_price_table {
+	background:url(../images/admin/price_16.png) no-repeat !important;
+	width:16px !important;
+	height:16px !important;
+}
+
+.icon-wpb-ozy_tweet_box {
+	background:url(../images/admin/tweet_16.png) no-repeat !important;
+	width:16px !important;
+	height:16px !important;
+}
+
+.icon-wpb-ozy_blog_latest_posts {
+	background:url(../images/admin/list_16.png) no-repeat !important;
+	width:16px !important;
+	height:16px !important;
+}
+
+.icon-wpb-ozy_gallery {
+	background:url(../images/admin/gallery_16.png) no-repeat !important;
+	width:16px !important;
+	height:16px !important;
+}
+
+.icon-wpb-ozy_styled_content_box {
+	background:url(../images/admin/styled_content_16.png) no-repeat !important;
+	width:16px !important;
+	height:16px !important;
+}
+
+/*visual composer objects extra class*/
+.wpb_ozy_portfolio_details .wpb_element_wrapper {
+	height:200px !important;
+	background-image:url(../images/admin/portfolio_32.png);
+}
+
+.wpb_ozy_member_box .wpb_element_wrapper {
+	background-image:url(../images/admin/member_32.png);
+	height:150px !important;
+}
+
+.wpb_ozy_price_table .wpb_element_wrapper {
+	background-image:url(../images/admin/price_32.png);
+}
+
+.wpb_ozy_tweet_box .wpb_element_wrapper {
+	background-image:url(../images/admin/tweet_32.png);
+}
+
+.wpb_title_with_icon .wpb_element_wrapper {
+	background-image:url(../images/admin/title-with-icon_32.png);
+	min-height:100px !important;
+}
+
+.wpb_blog_latest_posts .wpb_element_wrapper {
+	background-image:url(../images/admin/list_32.png);
+}
+
+.wpb_ozy_gallery .wpb_element_wrapper {
+	background-image:url(../images/admin/gallery_32.png);
+}
+
+.wpb_ozy_styled_content_box .wpb_element_wrapper {
+	background-image:url(../images/admin/styled_content_32.png);
+}

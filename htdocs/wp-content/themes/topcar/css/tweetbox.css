@@ -1,0 +1,7 @@
+form#tweetUs{display:block!important;height:90px;overflow:hidden;padding:0 0 20px;position:relative;width:100%}
+form#tweetUs textarea{-moz-box-shadow:none!important;-webkit-box-shadow:none!important;background-image:url(../images/tweet-box-bg.png)!important;border:none!important;box-shadow:none!important;clear:both;font-size:32px!important;font-weight:lighter!important;height:186px;line-height:62px!important;margin-top:10px;overflow:hidden;resize:none;width:100%}
+form#tweetUs label .icon-twitter{font-size:150%}
+form#tweetUs label .pull-right{-moz-opacity:0.65;-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=65);-webkit-opacity:0.65;filter:alpha(opacity=65);font-size:90%!important;opacity:0.65}
+form#tweetUs #sendTweet{display:block;float:none!important;height:auto;margin:0 auto!important;text-align:center;width:auto}
+form#tweetUs #sendTweet > span{margin-bottom:0!important;margin-top:10px!important}
+form#tweetUs .icon-twitter{color:#00aced}

@@ -1,0 +1,5 @@
+.twitter-wrapper{display:inline-block}
+.twitter-wrapper .tweet{clear:both;float:left;margin-top:10px;width:100%}
+.twitter-wrapper .tweet:first-child{margin-top:0}
+.twitter-wrapper .tweet img{display:block;float:left;margin-right:10px}
+.twitter-wrapper .tweet .tweet_time>a{font-size:90%!important}

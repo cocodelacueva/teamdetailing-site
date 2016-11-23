@@ -1,0 +1,182 @@
+/*
+ Theme Name:     Divi Child Theme
+ Theme URI:      http://www.elegantthemes.com/gallery/divi/
+ Description:    Divi Child Theme
+ Author:         LaCueva.tv
+ Author URI:     http://lacueva.tv
+ Template:       Divi
+ Version:        1.0.0
+*/
+ 
+@import url("../Divi/style.css");
+@charset "utf-8";
+/*reset*/
+.sr-only {
+	display: none;
+}
+/*eliminar carrito de compras*/
+#top-header .et-cart-info {
+	display: none;
+}
+
+/*top, pone en minúsculas la dirección de email*/
+#et-info-email {
+	text-transform: lowercase;
+}
+/*widget de productos, quita la negrita*/
+.woocommerce ul.cart_list li a, .woocommerce ul.product_list_widget li a {
+	font-weight: 300;
+}
+
+/*pone la red social de instagram en vez de twitter abajo*/
+.et-social-twitter a.icon:before {
+	content: "\e09a";
+}
+
+/*corregimos sub menus sub menus*/
+.sub-menu>li>ul>li>a {
+	text-transform: initial!important;
+}
+
+/*cambia el color del togle de los moviles*/
+.mobile_menu_bar:before {
+	color:#fff!important;
+}
+
+/*alinea el captcha y el boton del formulario*/
+.et_pb_contact_right {
+	vertical-align: bottom;
+}
+
+/*cambia color del placeholder del formulario*/
+.et_pb_contact_form_0.et_pb_contact_form_container .input {
+	color:#000;
+}
+
+/*estilos propios*/
+.lista-tratamientos {
+    text-shadow: 1px 1px 1px #333;
+    letter-spacing: 1px;
+    font-size: 22px;
+    line-height: 24px;
+    margin: 0;
+    padding: 0;
+}
+
+.lista-sub-tratamientos {
+	text-shadow: 1px 1px 1px #333;
+	font-style: italic;
+	letter-spacing: 1px;
+	list-style-type: circle!important;
+	font-size: 18px;
+	line-height: 20px;
+	margin: 0!important;
+	padding: 0 0 0 30px!important;
+}
+
+.lista-sub-tratamientos li, .lista-tratamientos li {
+	margin: 5px 0;
+}
+
+.lista-no-shadow {
+	text-shadow: none;
+}
+
+.lqva-icon-telefonos {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background: url(http://teamdetailing.dev/wp-content/uploads/2016/11/sprite-teamdetailing.png);
+	margin-right: 5px;
+	vertical-align: middle;
+}
+.lqva-icon-telefonos-tel {
+	background-position: -31px -129px;
+}
+.lqva-icon-telefonos-cel {
+	background-position: -31px -181px;
+}
+
+/*seccion servicios*/
+.lqva-lista-servicios-blur > a {
+	text-decoration:none;
+	color:#fff!important;
+
+}
+.lqva-lista-servicios-blur:hover {
+	text-decoration: underline;
+}
+/*footer widget texts*/
+.lqva-logos-footer {
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.lqva-logos-footer img {
+	width: 80%;
+    margin: 10px auto;
+    display: block;
+}
+
+.lqva-logos-footer img:last-child {
+	width: 50%;
+	margin: 50px auto;
+}
+
+.lqva-contact-footer {
+	margin-left: -15px;
+}
+.lqva-list-contact-text {
+	margin: 30px 0;
+	font-size: 14px;
+}
+
+.lqva-list-contact-text li:before, .lqva-list-contact-redes li:before {
+	content: none!important;
+}
+
+.lqva-list-contact-redes li {
+	display: inline-block;
+}
+
+.lqva-list-contact-redes li a:hover {
+	opacity: 0.7;
+}
+.lqva-icon-footer {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	background: url(http://teamdetailing.dev/wp-content/uploads/2016/11/sprite-teamdetailing.png);
+} 
+.lqva-icon-footer-face{
+	background-position: -24px -339px;
+}
+.lqva-icon-footer-instagram{
+	background-position: -90px -340px;
+}
+
+.lqva-icon-footer-sm {
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	background: url(http://teamdetailing.dev/wp-content/uploads/2016/11/sprite-teamdetailing.png);
+	margin-right: 10px;
+	vertical-align: middle;
+} 
+.lqva-icon-footer-sm-tel {
+	background-position: -31px -222px;
+}
+.lqva-icon-footer-sm-cel {
+	background-position: -31px -245px;
+}
+.lqva-icon-footer-sm-dir {
+	background-position: -31px -267px;
+}
+.lqva-icon-footer-sm-ema {
+	background-position: -33px -288px;
+}
+
+.lqva-copy-footer {
+	font-size: 10px;
+}

@@ -1,0 +1,8 @@
+.ozy-member-box{margin-bottom:30px}
+.ozy-member-box>div{padding:10px;text-align:center}
+.ozy-member-box>div>h4{margin-top:15px}
+.ozy-member-box>div>h5{font-style:italic}
+.ozy-member-box ul{font-size:0!important;line-height:0!important;list-style:none outside none!important;margin:0!important;padding:0!important;text-align:center!important}
+.ozy-member-box ul>li{display:inline-block;float:none;margin:6px 0 6px 1px !important;text-align:center}
+.ozy-member-box ul>li>a{display:block;font-size:24px;height:28px;text-align:center;text-decoration:none!important;width:28px}
+.ozy-member-box ul>li>a>span{display:inline-block;font-size:16px!important;height:28px!important;line-height:28px;padding-left:2px;text-align:center!important;width:28px!important}

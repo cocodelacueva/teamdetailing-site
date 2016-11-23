@@ -1,0 +1,192 @@
+
+@font-face {
+    font-family: 'socialicoregular';
+    src: url('socialico-webfont-ie7.eot');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.social-icon-font {
+	font-family: socialicoregular !important;
+	
+	/* sprites.less reset */
+	display: inline;
+	width: auto;
+	height: auto;
+	line-height: normal;
+	vertical-align: baseline;
+	background-image: none;
+	background-position: 0% 0%;
+	background-repeat: repeat;
+	margin-top: 0;
+	
+	text-decoration:none !important;
+}
+
+.sif-blogger:before {
+	content: "\0055";
+}
+
+.sif-blogger {
+	*zoom:expression(this.runtimeStyle['zoom'] = '1',this.innerHTML = 'U');
+}
+
+.sif-bebo:before {
+	content: "\0042";
+}
+
+.sif-bebo {
+	*zoom:expression(this.runtimeStyle['zoom'] = '1',this.innerHTML = 'B');
+}
+
+.sif-deviantart:before {
+	content: '\004A';
+}
+
+.sif-deviantart {
+	*zoom:expression(this.runtimeStyle['zoom'] = '1',this.innerHTML = 'J');
+}
+
+.sif-dribbble:before {
+	content: "\0044";	
+}
+
+.if-dribbble {
+	*zoom:expression(this.runtimeStyle['zoom'] = '1',this.innerHTML = 'D');
+}
+
+.sif-facebook:before {
+	content: "\0046";	
+}
+
+.sif-facebook {
+	*zoom:expression(this.runtimeStyle['zoom'] = '1',this.innerHTML = 'F');
+}
+
+.sif-flickr:before {
+	content: "\004E";
+}
+
+.sif-flickr {
+	*zoom:expression(this.runtimeStyle['zoom'] = '1',this.innerHTML = 'N');
+}
+
+.sif-google:before {
+	content: "\0047";
+}
+
+.sif-google {
+	*zoom:expression(this.runtimeStyle['zoom'] = '1',this.innerHTML = 'G');
+}
+
+.sif-behance:before {
+	content: "\0045";
+}
+
+.sif-behance {
+	*zoom:expression(this.runtimeStyle['zoom'] = '1',this.innerHTML = 'E');
+}
+
+.sif-linkedin:before {
+	content: "\0049";
+}
+
+.sif-linkedin {
+	*zoom:expression(this.runtimeStyle['zoom'] = '1',this.innerHTML = 'I');
+}
+
+.sif-rss:before {
+	content: "\0052";
+}
+
+.sif-rss {
+	*zoom:expression(this.runtimeStyle['zoom'] = '1',this.innerHTML = 'R');
+}
+
+.sif-skype:before {
+	content: "\0048";
+}
+
+.sif-skype {
+	*zoom:expression(this.runtimeStyle['zoom'] = '1',this.innerHTML = 'H');
+}
+		
+.sif-myspace:before {
+	content: "\004D";
+}
+
+.sif-myspace {
+	*zoom:expression(this.runtimeStyle['zoom'] = '1',this.innerHTML = 'M');
+}
+
+.sif-stumbleupon:before {
+	content: "\0053";
+}
+
+.sif-stumbleupon {
+	*zoom:expression(this.runtimeStyle['zoom'] = '1',this.innerHTML = 'S');
+}
+
+.sif-tumblr:before {
+	content: "\004F";
+}
+
+.sif-tumblr {
+	*zoom:expression(this.runtimeStyle['zoom'] = '1',this.innerHTML = 'O');
+}
+
+.sif-twitter:before {
+	content: "\0054";
+}
+
+.sif-twitter {
+	*zoom:expression(this.runtimeStyle['zoom'] = '1',this.innerHTML = 'T');
+}
+
+.sif-vimeo:before {
+	content: "\0056";
+}
+
+.sif-vimeo {
+	*zoom:expression(this.runtimeStyle['zoom'] = '1',this.innerHTML = 'V');
+}
+
+.sif-wordpress:before {
+	content: "\0057";
+}
+
+.sif-wordpress {
+	*zoom:expression(this.runtimeStyle['zoom'] = '1',this.innerHTML = 'W');
+}
+
+.sif-yahoo:before {
+	content: "\0059";
+}
+
+.sif-yahoo {
+	*zoom:expression(this.runtimeStyle['zoom'] = '1',this.innerHTML = 'Y');
+}
+
+.sif-youtube:before {
+	content: "\0058";
+}
+
+.sif-youtube {
+	*zoom:expression(this.runtimeStyle['zoom'] = '1',this.innerHTML = 'X');
+}
+
+.sif-pinterest:before {
+	content: "\003A";
+}
+
+.sif-pinterest {
+	*zoom:expression(this.runtimeStyle['zoom'] = '1',this.innerHTML = ':');
+}
+
+.sif-instagram:before {
+	content: "\0064";
+}
+
+.sif-instagram {
+	*zoom:expression(this.runtimeStyle['zoom'] = '1',this.innerHTML = 'd');
+}

@@ -1,0 +1,5 @@
+.ozy-gallery-wrapper > div > div{overflow:hidden;position:relative;width:100%}
+.ozy-gallery-wrapper > div{float:left;margin:0 0 20px;width:277px}
+.ozy-gallery-wrapper > div > div > a{display:block}
+.ozy-gallery-wrapper > div > div > a > img{-moz-transition:all .4s ease;-ms-transition:all .4s ease-in-out;-o-transition:all .4s ease-in-out;-webkit-transition:all .4s ease-in-out;transition:all .4s ease-in-out;width:100%}
+.ozy-gallery-wrapper > div > div > a:hover > img{-moz-transform:scale(1.1,1.1);-ms-transform:scale(1.1,1.1);-o-transform:scale(1.1,1.1);-webkit-transform:scale(1.1,1.1);transform:scale(1.1,1.1)}
