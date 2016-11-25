@@ -1150,7 +1150,6 @@ class ET_Builder_Module_Video_Slider extends ET_Builder_Module {
 			'show_image_overlay' => array( 'hide' ),
 			'show_arrows'        => array( 'on' ),
 			'show_thumbnails'    => array( 'on' ),
-			'controls_color'     => array( 'light' ),
 		);
 
 		$this->custom_css_options = array(
@@ -5470,7 +5469,7 @@ class ET_Builder_Module_Pricing_Tables extends ET_Builder_Module {
 			ET_Builder_Element::set_style( $function_name, array(
 				'selector'    => '%%order_class%% .et_pb_featured_table .et_pb_pricing_heading h2',
 				'declaration' => sprintf(
-					'color: %1$s;',
+					'color: %1$s !important;',
 					esc_html( $featured_table_header_text_color )
 				),
 			) );
@@ -5490,7 +5489,7 @@ class ET_Builder_Module_Pricing_Tables extends ET_Builder_Module {
 			ET_Builder_Element::set_style( $function_name, array(
 				'selector'    => '%%order_class%% .et_pb_featured_table .et_pb_sum',
 				'declaration' => sprintf(
-					'color: %1$s;',
+					'color: %1$s !important;',
 					esc_html( $featured_table_price_color )
 				),
 			) );
@@ -5498,9 +5497,9 @@ class ET_Builder_Module_Pricing_Tables extends ET_Builder_Module {
 
 		if ( '' !== $featured_table_text_color ) {
 			ET_Builder_Element::set_style( $function_name, array(
-				'selector'    => '%%order_class%% .et_pb_featured_table .et_pb_pricing_content',
+				'selector'    => '%%order_class%% .et_pb_featured_table .et_pb_pricing_content li',
 				'declaration' => sprintf(
-					'color: %1$s;',
+					'color: %1$s !important;',
 					esc_html( $featured_table_text_color )
 				),
 			) );
@@ -7362,6 +7361,22 @@ class ET_Builder_Module_Login extends ET_Builder_Module {
 		}
 
 		if ( '' !== $focus_text_color ) {
+			$placeholder_selectors = array(
+				'%%order_class%% .et_pb_newsletter_form p input:focus::-webkit-input-placeholder',
+				'%%order_class%% .et_pb_newsletter_form p input:focus::-moz-placeholder',
+				'%%order_class%% .et_pb_newsletter_form p input:focus:-ms-input-placeholder',
+			);
+
+			foreach ( $placeholder_selectors as $single_selector ) {
+				ET_Builder_Element::set_style( $function_name, array(
+					'selector'    => $single_selector,
+					'declaration' => sprintf(
+						'color: %1$s;',
+						esc_html( $focus_text_color )
+					),
+				) );
+			}
+
 			ET_Builder_Element::set_style( $function_name, array(
 				'selector'    => '%%order_class%% .et_pb_newsletter_form p input:focus',
 				'declaration' => sprintf(
@@ -7392,6 +7407,22 @@ class ET_Builder_Module_Login extends ET_Builder_Module {
 		}
 
 		if ( '' !== $form_field_text_color ) {
+			$placeholder_selectors = array(
+				'%%order_class%% .input::-webkit-input-placeholder',
+				'%%order_class%% .input::-moz-placeholder',
+				'%%order_class%% .input:-ms-input-placeholder',
+			);
+
+			foreach ( $placeholder_selectors as $single_selector ) {
+				ET_Builder_Element::set_style( $function_name, array(
+					'selector'    => $single_selector,
+					'declaration' => sprintf(
+						'color: %1$s;',
+						esc_html( $form_field_text_color )
+					),
+				) );
+			}
+
 			ET_Builder_Element::set_style( $function_name, array(
 				'selector'    => '%%order_class%% input[type="text"], %%order_class%% textarea, %%order_class%% .input',
 				'declaration' => sprintf(
@@ -8162,6 +8193,7 @@ class ET_Builder_Module_Filterable_Portfolio extends ET_Builder_Module {
 				'option_category'  => 'basic_option',
 				'description'      => esc_html__( 'Select the categories that you would like to include in the feed.', 'et_builder' ),
 				'computed_affects' => array(
+					'__project_terms',
 					'__projects',
 				),
 				'taxonomy_name' => 'project_category',
@@ -8969,7 +9001,7 @@ class ET_Builder_Module_Bar_Counters_Item extends ET_Builder_Module {
 
 		if ( '' !== $label_color ) {
 			ET_Builder_Element::set_style( $function_name, array(
-				'selector'    => '%%order_class%% .et_pb_counter_title',
+				'selector'    => '.et_pb_counters %%order_class%% span.et_pb_counter_title',
 				'declaration' => sprintf(
 					'color: %1$s !important;',
 					esc_html( $label_color )
@@ -8979,7 +9011,7 @@ class ET_Builder_Module_Bar_Counters_Item extends ET_Builder_Module {
 
 		if ( '' !== $percentage_color ) {
 			ET_Builder_Element::set_style( $function_name, array(
-				'selector'    => '%%order_class%% .et_pb_counter_amount',
+				'selector'    => '.et_pb_counters %%order_class%% span.et_pb_counter_amount',
 				'declaration' => sprintf(
 					'color: %1$s !important;',
 					esc_html( $percentage_color )
@@ -11484,7 +11516,7 @@ class ET_Builder_Module_Blog extends ET_Builder_Module {
 			),
 			'border' => array(
 				'css'      => array(
-					'main' => "%%order_class%%.et_pb_blog_grid .et_pb_post",
+					'main' => "%%order_class%%.et_pb_module .et_pb_post",
 					'important' => 'plugin_only',
 				),
 			),
@@ -12968,7 +13000,7 @@ class ET_Builder_Module_Countdown_Timer extends ET_Builder_Module {
 				'numbers' => array(
 					'label'    => esc_html__( 'Numbers', 'et_builder' ),
 					'css'      => array(
-						'main' => "{$this->main_css_element} .section p",
+						'main' => "{$this->main_css_element} .section p.value, {$this->main_css_element} .sep p",
 					),
 					'line_height' => array(
 						'range_settings' => array(
@@ -13197,10 +13229,11 @@ class ET_Builder_Module_Map extends ET_Builder_Module {
 		);
 
 		$this->fields_defaults = array(
-			'zoom_level'           => array( '18', 'only_default_setting' ),
-			'mouse_wheel'          => array( 'on' ),
-			'mobile_dragging'      => array( 'on' ),
-			'use_grayscale_filter' => array( 'off' ),
+			'zoom_level'              => array( '18', 'only_default_setting' ),
+			'mouse_wheel'             => array( 'on' ),
+			'mobile_dragging'         => array( 'on' ),
+			'use_grayscale_filter'    => array( 'off' ),
+			'grayscale_filter_amount' => array( '0' ),
 		);
 	}
 
@@ -13297,6 +13330,7 @@ class ET_Builder_Module_Map extends ET_Builder_Module {
 			'grayscale_filter_amount' => array(
 				'label'           => esc_html__( 'Grayscale Filter Amount (%)', 'et_builder' ),
 				'type'            => 'range',
+				'default'         => '0',
 				'option_category' => 'configuration',
 				'tab_slug'        => 'advanced',
 				'depends_show_if'   => 'on',

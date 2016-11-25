@@ -2,7 +2,7 @@
 
 if ( ! defined( 'ET_BUILDER_PRODUCT_VERSION' ) ) {
 	// Note, when this is updated, you must also update corresponding version in builder.js: `window.et_builder_version`
-	define( 'ET_BUILDER_PRODUCT_VERSION', '3.0.19' );
+	define( 'ET_BUILDER_PRODUCT_VERSION', '3.0.21' );
 }
 
 if ( ! defined( 'ET_BUILDER_VERSION' ) ) {
@@ -2099,20 +2099,13 @@ function et_pb_add_builder_page_js_css(){
 		'default_color_palette'                    => implode( '|', et_pb_get_default_color_palette() ),
 		'page_section_bg_color'                    => get_post_meta( get_the_ID(), '_et_pb_section_background_color', true ),
 		'page_gutter_width'                        => '' !== ( $saved_gutter_width = get_post_meta( get_the_ID(), '_et_pb_gutter_width', true ) ) ? $saved_gutter_width : et_get_option( 'gutter_width', 3 ),
-		'product_version'                          => ET_BUILDER_VERSION,
-		'invalid_color'    => esc_html__( 'Invalid Color', 'et_builder' ),
-		'et_pb_preview_nonce' => wp_create_nonce( 'et_pb_preview_nonce' ),
-		'is_divi_library'  => 'et_pb_layout' === $typenow ? 1 : 0,
-		'layout_type'      => 'et_pb_layout' === $typenow ? et_pb_get_layout_type( get_the_ID() ) : 0,
-		'is_plugin_used'   => et_is_builder_plugin_active(),
-		'yoast_content'    => et_is_yoast_seo_plugin_active() ? $post_content_processed : '',
-		'product_version'  => ET_BUILDER_PRODUCT_VERSION,
-		'force_cache_purge' => (int) $force_cache_update,
-		'memory_limit_increased' => esc_html__( 'Your memory limit has been increased', 'et_builder' ),
-		'memory_limit_not_increased' => esc_html__( "Your memory limit can't be changed automatically", 'et_builder' ),
-		'google_api_key' => et_pb_get_google_api_key(),
-		'options_page_url' => et_pb_get_options_page_link(),
-		'et_pb_google_maps_script_notice' => et_pb_enqueue_google_maps_script(),
+		'product_version'                          => ET_BUILDER_PRODUCT_VERSION,
+		'force_cache_purge'                        => (int) $force_cache_update,
+		'memory_limit_increased'                   => esc_html__( 'Your memory limit has been increased', 'et_builder' ),
+		'memory_limit_not_increased'               => esc_html__( "Your memory limit can't be changed automatically", 'et_builder' ),
+		'google_api_key'                           => et_pb_get_google_api_key(),
+		'options_page_url'                         => et_pb_get_options_page_link(),
+		'et_pb_google_maps_script_notice'          => et_pb_enqueue_google_maps_script(),
 	), et_pb_history_localization() ) ) );
 
 	wp_localize_script( 'et_pb_admin_js', 'et_pb_ab_js_options', apply_filters( 'et_pb_ab_js_options', array(

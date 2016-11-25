@@ -3279,6 +3279,8 @@ class ET_Builder_Element {
 			$button_letter_spacing_hover_tablet = $this->shortcode_atts["{$option_name}_letter_spacing_hover_tablet"];
 			$button_letter_spacing_hover_phone  = $this->shortcode_atts["{$option_name}_letter_spacing_hover_phone"];
 
+			$button_icon_pseudo_selector = $button_icon_placement === 'left' ? ':before' : ':after';
+
 			if ( 'on' === $button_custom ) {
 				$button_text_size = '' === $button_text_size || 'px' === $button_text_size ? '20px' : $button_text_size;
 				$button_text_size = '' !== $button_text_size && false === strpos( $button_text_size, 'px' ) ? $button_text_size . 'px' : $button_text_size;
@@ -3332,7 +3334,7 @@ class ET_Builder_Element {
 					'' !== $button_bg_color_hover ? sprintf( 'background:%1$s !important;', $button_bg_color_hover ) : '',
 					'' !== $button_border_color_hover ? sprintf( 'border-color:%1$s !important;', $button_border_color_hover ) : '',
 					'' !== $button_border_radius_hover ? sprintf( 'border-radius:%1$s;', et_builder_process_range_value( $button_border_radius_hover ) ) : '',
-					'' !== $button_letter_spacing_hover ? sprintf( 'letter-spacing:%1$spx;', $button_letter_spacing_hover ) : '',
+					'' !== $button_letter_spacing_hover ? sprintf( 'letter-spacing:%1$s;', $button_letter_spacing_hover ) : '',
 					'off' === $button_on_hover ?
 						''
 						:
@@ -3350,6 +3352,8 @@ class ET_Builder_Element {
 				if ( 'off' === $button_use_icon ) {
 					$main_element_styles_after = 'display:none !important;';
 					$no_icon_styles = 'padding: 0.3em 1em !important;';
+
+					$selector = sprintf( '%1$s:before, %1$s:after', $css_element_processed );
 
 					self::set_style( $function_name, array(
 						'selector'    => $css_element . ',' . $css_element . ':hover',
@@ -3377,20 +3381,34 @@ class ET_Builder_Element {
 						'' !== $button_icon_code ? sprintf( 'font-size:%1$s !important;', $button_icon_size ) : '',
 						sprintf( 'opacity:%1$s;', 'off' !== $button_on_hover ? '0' : '1' ),
 						'off' !== $button_on_hover && '' !== $button_icon_code ?
-							sprintf( 'margin-left:%1$s;left:%2$s;',
-								'left' === $button_icon_placement ? '0' : '-1em',
-								'left' === $button_icon_placement ? '1em' : 'auto'
+							sprintf( 'margin-left: %1$s; %2$s: auto;',
+								'left' === $button_icon_placement ? '-1.3em' : '-1em',
+								'left' === $button_icon_placement ? 'right' : 'left'
 							)
 							: '',
 						'off' === $button_on_hover ?
-							sprintf( 'margin-left:%1$s;left:%2$s;',
-								'left' === $button_icon_placement ? '0' : '.3em',
-								'left' === $button_icon_placement ? '0.15em' : 'auto'
+							sprintf( 'margin-left: %1$s; %2$s:auto;',
+								'left' === $button_icon_placement ? '-1.3em' : '.3em',
+								'left' === $button_icon_placement ? 'right' : 'left'
 							)
 							: '',
-						'on' === $button_use_icon ? 'display: inline-block;' : ''
-
+						( in_array( $button_use_icon , array( 'default', 'on' ) ) ? 'display: inline-block;' : '' )
 					);
+
+					// Reverse icon position
+					if ( 'left' === $button_icon_placement ) {
+						$button_icon_left_content = '' !== $button_icon_code ? 'content: attr(data-icon);' : '';
+
+						self::set_style( $function_name, array(
+							'selector'    => $css_element_processed . ':after',
+							'declaration' => 'display: none;',
+						) );
+
+						self::set_style( $function_name, array(
+							'selector'    => $css_element_processed . ':before',
+							'declaration' => $button_icon_left_content . ' ; font-family: "ETmodules" !important;',
+						) );
+					}
 
 					$hover_after_styles = sprintf(
 						'%1$s
@@ -3400,16 +3418,16 @@ class ET_Builder_Element {
 							sprintf( 'margin-left:%1$s;', '35' !== $button_icon_code ? '.3em' : '0' )
 							: '',
 							'' !== $button_icon_code ?
-								sprintf( 'left:%1$s;margin-left:%2$s;',
-									'left' === $button_icon_placement ? '0.15em' : 'auto',
-									'35' !== $button_icon_code ? '.3em' : '0'
+								sprintf( '%1$s: auto; margin-left: %2$s;',
+									'left' === $button_icon_placement ? 'right' : 'left',
+									'left' === $button_icon_placement ? '-1.3em' : '.3em'
 								)
 							: '',
 						'off' !== $button_on_hover ? 'opacity: 1;' : ''
 					);
 
 					self::set_style( $function_name, array(
-						'selector'    => $css_element_processed . ':hover:after',
+						'selector'    => $css_element_processed . ':hover' . $button_icon_pseudo_selector,
 						'declaration' => rtrim( $hover_after_styles ),
 					) );
 
@@ -3418,15 +3436,17 @@ class ET_Builder_Element {
 						$custom_icon_size = $button_text_size;
 
 						self::set_style( $function_name, array(
-							'selector'    => $css_element_processed . ':after',
+							'selector'    => $css_element_processed . $button_icon_pseudo_selector,
 							'declaration' => sprintf( 'font-size:%1$s;', $default_icons_size ),
 						) );
 
 						self::set_style( $function_name, array(
-							'selector'    => 'body.et_button_custom_icon #page-container ' . $css_element . ':after',
+							'selector'    => 'body.et_button_custom_icon #page-container ' . $css_element . $button_icon_pseudo_selector,
 							'declaration' => sprintf( 'font-size:%1$s;', $custom_icon_size ),
 						) );
 					}
+
+					$selector = $css_element_processed . $button_icon_pseudo_selector;
 				}
 
 				foreach( array( 'tablet', 'phone' ) as $device ) {
@@ -3437,7 +3457,7 @@ class ET_Builder_Element {
 
 					if ( ( '' !== $current_text_size && '0px' !== $current_text_size ) || '' !== $current_letter_spacing ) {
 						self::set_style( $function_name, array(
-							'selector'    => $css_element_processed . ',' . $css_element_processed . ':after',
+							'selector'    => $css_element_processed . ',' . $css_element_processed . $button_icon_pseudo_selector,
 							'declaration' => sprintf(
 								'%1$s
 								%2$s',
@@ -3461,7 +3481,7 @@ class ET_Builder_Element {
 				}
 
 				self::set_style( $function_name, array(
-					'selector'    => $css_element_processed . ':after',
+					'selector'    => $selector,
 					'declaration' => rtrim( $main_element_styles_after ),
 				) );
 			}
