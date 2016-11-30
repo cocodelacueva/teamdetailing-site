@@ -1,5 +1,9 @@
 # team detailing  
 
+Versión 1.4 "correcciones por Emanuel de Team Detailing, todo listo para revisar y subir online"  
+
+* hubo varios cambios en el header, seleccionamos las imágenes que quedarían.
+
 Versión 1.3 "correcciones por Emanuel de Team Detailing"  
 
 * Cambios en el header del inicio con nuevos textos y cambio de la última imagen por un bmw gris.
