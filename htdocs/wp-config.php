@@ -20,6 +20,8 @@
 
 // ** MySQL settings ** //
 /** The name of the database for WordPress */
+//define('WP_CACHE', true); //Added by WP-Cache Manager
+define( 'WPCACHEHOME', '/srv/www/teamdetailing/htdocs/wp-content/plugins/wp-super-cache/' ); //Added by WP-Cache Manager
 define('DB_NAME', 'teamdetailing');
 
 /** MySQL database username */

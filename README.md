@@ -1,5 +1,13 @@
 # team detailing  
 
+Versión 2.0 "online en su hosting"  
+
+* Instalado el nuevo wp 4.7
+* Instalado y activado el pluggin w3-total-cache.0.9.5.1
+* formulario apunta directo a teamdetailing@outlook.com.ar
+* Falta actualizar pluggins que seguro se actualizan ahora con wp
+* Base de datos luego de actualizar wp, 7.12.16
+
 Versión 1.5 "correcciones por Emanuel de Team Detailing, todo listo para revisar y subir online"  
 
 * Quería pedirte si antes de subirla podríamos hacer algo con las entradas de los "Últimos Trabajos", Ya que los que figuran son trabajos viejos con productos que ya no usamos. (me pasó algunos links de facebook que use para crear nuevas entradas y sincronice la fecha con estos mismos posts de facebook)

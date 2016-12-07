@@ -42,15 +42,14 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY', 'oA$q?pM-GiU**Rdt:$hwK7U-,xn*dcG `fV*OHgSSR4Y75qccOUD/u}-jx;h-e>F'); // Cambia esto por tu frase aleatoria.
-define('SECURE_AUTH_KEY', 'ujTd:{12]n{`DyMvqEaXy[rF,V=|f@qj*u6/-C-:fSKZ_l5vpY+z87-_<y5i3*L5'); // Cambia esto por tu frase aleatoria.
-define('LOGGED_IN_KEY', 't_72)m_}A~oq4Phq<;f18#moHv0M]+1U a#$6]KjL@wkRM3CWG5ns@Hd=|xw1G[q'); // Cambia esto por tu frase aleatoria.
-define('NONCE_KEY', 'I8pYel|bcV}Q{OgB@2N?KpaW>RVt2m;A?31[EiZc38.Ei{kpzmHTN_% IO#5-&io'); // Cambia esto por tu frase aleatoria.
-define('AUTH_SALT', 'U+gd!%9V*sVby3<h)[<Pz],6SsnA5+s%Sq~ B<yRTzdXn~(CR@)o~?KV|u=U*#9I'); // Cambia esto por tu frase aleatoria.
-define('SECURE_AUTH_SALT', 'kzb4y@EI&InOo+-$|vl*o(NyA+9hMW4Jncp+-PStXI_Mlqe TMkJ% %A>%gVZcA/'); // Cambia esto por tu frase aleatoria.
-define('LOGGED_IN_SALT', 'EUa-2KT{o-0Q~/*N+:M]qOB_D,RL@`n+l:zt-9%)9*~+*7pM9q%+#!ESmgm&_2Zd'); // Cambia esto por tu frase aleatoria.
-define('NONCE_SALT', 'P+?}8_|ghqy2%fc|fJ7?n[:Z@||~c nq)r%q Up7g_ZssDmw03Ak+Ybr}W= @+z='); // Cambia esto por tu frase aleatoria.
-
+define('AUTH_KEY',         ':1BL/Ya5xbQz]dd|K4}-=U||gHJVR<xM#,H?d=-tUrr-H d8[~ud};2w}PtL&N;R');
+define('SECURE_AUTH_KEY',  'Y]<vcauy(K)g{K=Z;i~jCqygMe+?V)fs.|dq]X,8V3%g|Wl|@-vawmXG<c8[gG+q');
+define('LOGGED_IN_KEY',    '6*:YklMTT^=+`cK-hnc+CfLzJ4hzGxVY-FAr3En4>D)7{9/x7[mz2nt$y|M}~K/6');
+define('NONCE_KEY',        'b3E$$+)[LE9wn@$k-U$+~_JSt-~W|2/UD/b|^h%ku4v0as%&AdI4g,lpwMia~EUZ');
+define('AUTH_SALT',        '0Y!I|&J:^OVbW&R*_iGo-&= |Ck5S,.-ud^_ 7Mme37^W;Q+Dna2r/CgT:?bRHIY');
+define('SECURE_AUTH_SALT', 'uj^Uy0nZX{-mEn#QZ]|c@@E^|^s:%~n?E-S/z1X+gaA,8[:HAoWw|)|[|0~T=?XN');
+define('LOGGED_IN_SALT',   '_Z:,A6Ei`al+OPva~}etRbh:H*L|E1NUpk{Pa q/3-,RwxP] Iqprl]?ii2+b%Vp');
+define('NONCE_SALT',       ':Zi)8@,}NxG;ggK|y2ln[p4,+j?fFN>+go-ppB$w+=>JvO6zkm@<}:p._N+|l={J');
 /**#@-*/
 
 /**
@@ -59,7 +58,7 @@ define('NONCE_SALT', 'P+?}8_|ghqy2%fc|fJ7?n[:Z@||~c nq)r%q Up7g_ZssDmw03Ak+Ybr}W
  * Cambia el prefijo si deseas instalar multiples blogs en una sola base de datos.
  * Emplea solo números, letras y guión bajo.
  */
-$table_prefix  = 'wp_';
+$table_prefix  = 'td_';
 
 /**
  * Idioma de WordPress.
@@ -79,6 +78,12 @@ define('WPLANG', 'es_ES');
  * en sus entornos de desarrollo.
  */
 define('WP_DEBUG', false);
+
+//desactiva el editor por defecto
+define( 'DISALLOW_FILE_EDIT', true);
+
+//quita o enumera la cantidad de revisiones guardadas, en vez de false se puede poner un número
+define( 'WP_POST_REVISIONS', false );
 
 /* ¡Eso es todo, deja de editar! Feliz blogging */
 
